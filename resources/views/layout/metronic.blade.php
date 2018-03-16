@@ -1016,7 +1016,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												</div>
 											</div>
 										</div>
-									</div>
+									</div> 
 									<div class="col2">
 										<div class="date">
 											 20 mins

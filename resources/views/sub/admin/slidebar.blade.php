@@ -51,12 +51,12 @@
 					</a>
 					<ul class="sub-menu">
 						<li>
-							<a href="{{route('cate.index')}}">
+							<a href="#">
 							<i class="icon-list"></i>
 							Danh sách danh mục</a>
 						</li>
 						<li>
-							<a href="{{route('cate.add')}}">
+							<a href="#">
 							<i class="icon-plus"></i>
 							Thêm danh mục</a>
 						</li>
