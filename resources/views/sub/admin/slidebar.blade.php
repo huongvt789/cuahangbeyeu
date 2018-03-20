@@ -46,19 +46,19 @@
 				<li>
 					<a href="javascript:;">
 					<i class="icon-basket"></i>
-					<span class="title">Danh mục</span>
+					<span class="title">Quản lý admin</span>
 					<span class="arrow "></span>
 					</a>
 					<ul class="sub-menu">
 						<li>
-							<a href="#">
+							<a href="{{route('qladmin.index')}}">
 							<i class="icon-list"></i>
-							Danh sách danh mục</a>
+							Danh sách admin</a>
 						</li>
 						<li>
 							<a href="#">
 							<i class="icon-plus"></i>
-							Thêm danh mục</a>
+							Thêm tài khoản admin</a>
 						</li>
 					</ul>
 				</li>
