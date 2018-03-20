@@ -2,16 +2,16 @@
 @section('content')
 	<!--suppress ALL -->
 	<div>
-		<h3>Thêm tài khoản Admin</h3>
+		<h3>Sửa tài khoản Admin</h3>
 	</div>
-	<form id="cate-form" action="{{ route('qladmin.save') }}" method="post" enctype="multipart/form-data" novalidate>
+	<form id="admin-form" action="{{ route('qladmin.save') }}" method="post" enctype="multipart/form-data" novalidate>
 		{{csrf_field()}}
 		<input type="hidden" name="id" value="{{$model->id}}">
 		<div class="col-md-6">
 			<div class="form-group row">
 				<lable class="col-md-3 control-lable">Email<span class="text-danger">*</span></lable>
 				<div class="col-md-9">
-					<input id="email" type="text" class="form-control" placeholder="Email" name="email" value="{{old('email',$model->email)}}">
+					<input id="email" type="email" class="form-control" placeholder="Email" name="email" value="{{old('email',$model->email)}}" disabled selected>
 					@if(count($errors)>0)
 						<span class="text-danger">{{$errors->first('email')}}</span>
 					@endif
@@ -29,7 +29,7 @@
 			<div class="form-group row">
 				<lable class="col-md-3 control-lable">Tên<span class="text-danger">*</span></lable>
 				<div class="col-md-9">
-					<input id="name" type="text" class="form-control" placeholder="Tên" name="name" value="{{old('fullname',$model->fullname)}}">
+					<input id="fullname" type="text" class="form-control" placeholder="Tên" name="fullname" value="{{old('fullname',$model->fullname)}}">
 					@if(count($errors)>0)
 						<span class="text-danger">{{$errors->first('fullname')}}</span>
 					@endif
@@ -38,7 +38,7 @@
 			<div class="form-group row">
 				<lable class="col-md-3 control-lable">Phone<span class="text-danger">*</span></lable>
 				<div class="col-md-9">
-					<input id="phone" type="text" class="form-control" placeholder="Số điện thoại" name="phone" value="{{old('phonenumber',$model->phonenumber)}}">
+					<input id="phonenumber" type="text" class="form-control" placeholder="Số điện thoại" name="phonenumber" value="{{old('phonenumber',$model->phonenumber)}}">
 					@if(count($errors)>0)
 						<span class="text-danger">{{$errors->first('phonenumber')}}</span>
 					@endif
@@ -57,8 +57,8 @@
 		<div class="col-md-6">
 			<div class="form-group-row">
 				<div class="col-md-offset-3">
-					<img style="margin-left:8px; margin-bottom:5px" src="@if($model->avartar=="")
-								{{asset('uploads/default-thumbnail.jpg')}}
+					<img style="margin-left:8px; margin-bottom:5px" src="@if($model->avatar=="")
+								{{asset('uploads/default-thumbnail.png')}}
 							@else {{asset($model->avatar)}}
 							@endif" id="exampleImage" width="150" height="130">
 				</div>
@@ -66,7 +66,7 @@
 			<div class="form-group row">
 				<label for="image" class="col-md-3 control-label">Ảnh</label>
 				<div class="col-md-9">
-					<input type="file" id="image" name="image" accept="image/*">
+					<input type="file" id="avatar" name="avatar" accept="image/*">
 					@if(count($errors)>0)
 						<span class="text-danger">{{$errors->first('avatar')}}</span>
 					@endif
@@ -80,4 +80,50 @@
 			</div>
 		</div>	
 	</form>
+	<input type="hidden" id="ajaxToken" value="{{csrf_token()}}">
+@endsection
+@section('js')
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#admin-form').validate({
+			// rules luật lệ ,required :bắt buộc
+			// muốn sử dụng phải dùng jquery.validate.min.js
+			rules:{
+				email: {
+                    required:true,
+                    email:true
+                    }
+				},
+                password: 'required',
+                fullname:'required',
+                phonenumber:'required',
+                address:'required'
+			},
+			// hiển thị messages 
+			messages:{
+				name:{
+					required:'Vui lòng nhập email',
+					email:'Vui lòng nhập đúng email'
+				},
+				password:{
+					required:'Vui lòng nhập đường dẫn'
+				}
+				phonenumber:{
+					required:'Vui lòng nhập số điện thoại'
+				},
+				fullname:{
+					required:'Vui lòng nhập tên '
+				},
+				address:{
+					required:'Vui lòng nhập địa chỉ'
+				},
+			},
+			// Hiển thị thông báo với class css danger
+			errorPlacement:function(error,element){
+				$(error).addClass('text-danger');
+				error.insertAfter(element);
+			}
+		});
+	});
+</script>
 @endsection

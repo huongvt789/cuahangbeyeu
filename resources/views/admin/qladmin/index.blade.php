@@ -36,7 +36,7 @@
 						 {{$loop->index+1}}
 					</td>
 					<td>
-						<img src="@if($element->avatar=="") {{asset('uploads/default-thumbnail.jpg')}}@else{{asset($element->avatar)}}@endif" width="140" height="100">
+						<img src="@if($element->avatar=="") {{asset('uploads/default-thumbnail.png')}}@else{{asset($element->avatar)}}@endif" width="140" height="100">
 					</td>
 					<td>
 						{{$element->email}}

@@ -27,6 +27,7 @@ return array(
     'App\\Http\\Requests\\SaveCategoryRequest' => $baseDir . '/app/Http/Requests/SaveCategoryRequest.php',
     'App\\Http\\Requests\\SaveUsersRequest' => $baseDir . '/app/Http/Requests/SaveUsersRequest.php',
     'App\\News' => $baseDir . '/app/News.php',
+    'App\\PasswordReset' => $baseDir . '/app/PasswordReset.php',
     'App\\Product' => $baseDir . '/app/Product.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',

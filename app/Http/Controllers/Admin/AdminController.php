@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Users;
 use App\Http\Requests\SaveUsersRequest;
-class AdminController extends Controller
+use Illuminate\Support\Facades\Hash; 
+class AdminController extends Controller 
 {
     public function index(){
     	$admin= Users::paginate(10);
@@ -23,7 +24,7 @@ class AdminController extends Controller
     	$model=Users::find($id);
     	if(!$model) return view('admin.404');
     	$admin=Users::all();
-    	return view('admin.qladmin.form',compact('model','admin'));
+    	return view('admin.qladmin.edit',compact('model','admin'));
     }
     public function save(SaveUsersRequest $request)
     {
@@ -36,6 +37,7 @@ class AdminController extends Controller
     		$model=new Users();
     	}
     	$model->fill($request->all());
+        $model->password=Hash::make($request->password);
         /*$model->is_menu= $request->is_menu ==1 ? 1: 0 ;*/
     	//upload file
     	if($request->hasFile('avatar')){
@@ -52,5 +54,14 @@ class AdminController extends Controller
     	if(!$admin) return view('admin.404');
     	$admin->delete();
     	return redirect(route('qladmin.index'));
+    }
+    public function checkName(Request $request){
+        $admin=Users::where('email',$request->email)->first();
+        if($admin && $admin->id == $request->id)
+        {
+            return response()->json(true);
+        }
+        $result=$admin==false?true:false;
+        return response()->json($result);
     }
 }

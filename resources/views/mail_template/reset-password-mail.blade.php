@@ -1,4 +1,4 @@
-Chào bạn {{$user->name}}
+Chào bạn {{$user->fullname}}
 <br>
 Bạn nhận được mail này vì đã yêu cầu cấp lại mật khẩu cho tài khoản của mình
 <br>

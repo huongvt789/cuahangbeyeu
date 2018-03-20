@@ -4,7 +4,7 @@
 	<div>
 		<h3>Thêm tài khoản Admin</h3>
 	</div>
-	<form id="cate-form" action="{{ route('qladmin.save') }}" method="post" enctype="multipart/form-data" novalidate>
+	<form id="admin-form" action="{{ route('qladmin.save') }}" method="post" enctype="multipart/form-data" novalidate>
 		{{csrf_field()}}
 		<input type="hidden" name="id" value="{{$model->id}}">
 		<div class="col-md-6">
@@ -58,7 +58,7 @@
 			<div class="form-group-row">
 				<div class="col-md-offset-3">
 					<img style="margin-left:8px; margin-bottom:5px" src="@if($model->avatar=="")
-								{{asset('uploads/default-thumbnail.jpg')}}
+								{{asset('uploads/default-thumbnail.png')}}
 							@else {{asset($model->avatar)}}
 							@endif" id="exampleImage" width="150" height="130">
 				</div>
@@ -81,4 +81,52 @@
 		</div>	
 	</form>
 	<input type="hidden" id="ajaxToken" value="{{csrf_token()}}">
+@endsection
+@section('js')
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#admin-form').validate({
+			// rules luật lệ ,required :bắt buộc
+			// muốn sử dụng phải dùng jquery.validate.min.js
+			rules:{
+				email:{
+					required:true,
+					email:true,
+					checkExisted:{
+                        requestUrl:"{{route('qladmin.checkName')}}",
+                        modelId:'{{$model->id}}'
+                    }
+				},
+                password: 'required',
+                fullname:'required',
+                phonenumber:'required',
+                address:'required'
+			},
+			// hiển thị messages 
+			messages:{
+				email:{
+					required:'Vui lòng nhập email',
+					email:'Nhập đúng email'
+				},
+				password:{
+					required:'Vui lòng nhập đường dẫn'
+				},
+				phonenumber:{
+					required:'Vui lòng nhập số điện thoại'
+				},
+				fullname:{
+					required:'Vui lòng nhập tên'
+				},
+				address:{
+					required:'Vui lòng nhập địa chỉ'
+				},
+			},
+			// Hiển thị thông báo với class css danger
+			errorPlacement:function(error,element){
+				$(error).addClass('text-danger');
+				error.insertAfter(element);
+			}
+		});
+	});
+</script>
 @endsection

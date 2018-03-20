@@ -39,10 +39,10 @@ Route::get('send-mail',function(){
 use Illuminate\Http\Request;
 use App\PasswordReset;
 use Carbon\Carbon;
-use App\User;
+use App\Users;
 Route::post('forget-pwd-email',function(Request $request){
 	$email=$request->email;
-	$user= App\User::where('email',$email)->first();
+	$user= App\Users::where('email',$email)->first();
 	if(!$user)
 	{
 		return 'Không có user';
@@ -59,7 +59,7 @@ Route::post('forget-pwd-email',function(Request $request){
 	//send email
 	//Forget Password
 	Mail::send('mail_template.reset-password-mail', compact('url','user'), function ($message) use ($user){
-	    $message->to($user->email, $user->name);
+	    $message->to($user->email, $user->fullname);
 	
 	    //$message->cc('author@gmail.com', 'Author');
 	
@@ -101,7 +101,7 @@ Route::post('auth-forget-password',function(Request $request){
 	if($request->password==""||$request->password==null){
 		return 'Mật khẩu không đúng định dạng';
 	}
-	$user=User::where('email',$pwdReset->email)->first();
+	$user=Users::where('email',$pwdReset->email)->first();
 	$user->password=Hash::make($request->password);
 	if($user->password==""||$user->password==null){
 		return 'Mật khẩu không đúng định dạng';

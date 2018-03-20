@@ -45,7 +45,7 @@
 				</li>
 				<li>
 					<a href="javascript:;">
-					<i class="icon-basket"></i>
+					<i class="icon-user"></i>
 					<span class="title">Quản lý admin</span>
 					<span class="arrow "></span>
 					</a>
@@ -56,7 +56,7 @@
 							Danh sách admin</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="{{route('qladmin.add')}}">
 							<i class="icon-plus"></i>
 							Thêm tài khoản admin</a>
 						</li>

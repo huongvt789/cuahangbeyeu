@@ -335,6 +335,7 @@ class ComposerStaticInitcbb3aefe4374ccbfa59746bbb6f99bbe
         'App\\Http\\Requests\\SaveCategoryRequest' => __DIR__ . '/../..' . '/app/Http/Requests/SaveCategoryRequest.php',
         'App\\Http\\Requests\\SaveUsersRequest' => __DIR__ . '/../..' . '/app/Http/Requests/SaveUsersRequest.php',
         'App\\News' => __DIR__ . '/../..' . '/app/News.php',
+        'App\\PasswordReset' => __DIR__ . '/../..' . '/app/PasswordReset.php',
         'App\\Product' => __DIR__ . '/../..' . '/app/Product.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
