@@ -106,10 +106,10 @@
 			messages:{
 				email:{
 					required:'Vui lòng nhập email',
-					email:'Nhập đúng email'
+					email:'Vui lòng nhập đúng ****@gmail.com'
 				},
 				password:{
-					required:'Vui lòng nhập đường dẫn'
+					required:'Vui lòng nhập mật khẩu'
 				},
 				phonenumber:{
 					required:'Vui lòng nhập số điện thoại'

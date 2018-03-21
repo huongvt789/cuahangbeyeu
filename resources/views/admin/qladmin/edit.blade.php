@@ -89,9 +89,12 @@
 			// rules luật lệ ,required :bắt buộc
 			// muốn sử dụng phải dùng jquery.validate.min.js
 			rules:{
-				email: {
-                    required:true,
-                    email:true
+				email:{
+					required:true,
+					email:true,
+					checkExisted:{
+                        requestUrl:"{{route('qladmin.checkName')}}",
+                        modelId:'{{$model->id}}'
                     }
 				},
                 password: 'required',
@@ -101,18 +104,18 @@
 			},
 			// hiển thị messages 
 			messages:{
-				name:{
+				email:{
 					required:'Vui lòng nhập email',
-					email:'Vui lòng nhập đúng email'
+					email:'Vui lòng nhập đúng ****@gmail.com'
 				},
 				password:{
-					required:'Vui lòng nhập đường dẫn'
-				}
+					required:'Vui lòng nhập mật khẩu'
+				},
 				phonenumber:{
 					required:'Vui lòng nhập số điện thoại'
 				},
 				fullname:{
-					required:'Vui lòng nhập tên '
+					required:'Vui lòng nhập tên'
 				},
 				address:{
 					required:'Vui lòng nhập địa chỉ'

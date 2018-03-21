@@ -62,6 +62,30 @@
 						</li>
 					</ul>
 				</li>
+				<li>
+					<a href="javascript:;">
+					<i class="icon-basket"></i>
+					<span class="title">Quản lý order</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="{{route('order.index')}}">
+							<i class="glyphicon glyphicon-refresh"></i>
+							Chờ duyệt</a>
+						</li>
+						<li>
+							<a href="{{route('order.pass')}}">
+							<i class="glyphicon glyphicon-ok"></i>
+							Đã giao</a>
+						</li>
+						<li>
+							<a href="{{route('order.destroy')}}">
+							<i class="glyphicon glyphicon-remove"></i>
+							Hủy</a>
+						</li>
+					</ul>
+				</li>
 			</ul>
 			<!-- END SIDEBAR MENU -->
 		</div>
