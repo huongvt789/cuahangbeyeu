@@ -66,6 +66,7 @@
 					</td>
 					<td>
 						<button type="button" class="btn btn-success">Đã giao <a class="glyphicon glyphicon-ok"></a></button>
+						<button type="button" class="btn btn-info"><a href="{{route('order.pdfview',['order_id'=>$element->order_id])}}" style="text-decoration: none; color: black;">In hóa đơn</a></button>
 					</td>
 				</tr>
 			@endforeach	

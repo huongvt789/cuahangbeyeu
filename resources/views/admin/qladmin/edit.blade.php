@@ -8,7 +8,7 @@
 		{{csrf_field()}}
 		<input type="hidden" name="id" value="{{$model->id}}">
 		<div class="col-md-6">
-			<div class="form-group row">
+			<div class="form-group row"> 
 				<lable class="col-md-3 control-lable">Email<span class="text-danger">*</span></lable>
 				<div class="col-md-9">
 					<input id="email" type="email" class="form-control" placeholder="Email" name="email" value="{{old('email',$model->email)}}" disabled selected>

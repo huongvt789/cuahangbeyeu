@@ -7,5 +7,8 @@ class Order extends Model
 {
     protected $table='order';
     protected $primaryKey='order_id';
+    protected $fillable = [
+        'order_id', 'httt','sdt','ten','diachi','ngaymua','thanhtien','status'
+    ];
     public $timestamps=false;
 }

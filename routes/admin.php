@@ -14,9 +14,8 @@ Route::group(['prefix'=>'order'],function(){
 	Route::get('/destroy','Admin\OrderController@destroy')->name('order.destroy');
 	Route::get('/update/{id}','Admin\OrderController@update')->name('order.update');
 	Route::get('/remove/{id}','Admin\OrderController@remove')->name('order.remove');
-	/*Route::post('/save','Admin\AdminController@save')->name('qladmin.save');
-	Route::get('/update/{id}','Admin\AdminController@edit')->name('qladmin.edit');
-	Route::get('/remove/{id}','Admin\AdminController@remove')->name('qladmin.remove');
-	Route::post('/check-name','Admin\AdminController@checkName')->name('qladmin.checkName');*/
+	Route::get('/info/{id}','Admin\OrderController@info')->name('order.info');
+	Route::get('/pdfview/{id}','Admin\OrderController@pdfview')->name('order.pdfview');
+	// Route::get('pdfview/{id}',array('as'=>'pdfview','uses'=>'Admin\OrderController@pdfview'));
 });
  ?>
