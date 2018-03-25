@@ -26,7 +26,12 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- BEGIN GLOBAL MANDATORY STYLES -->
 @include('sub.admin.style')
 <!-- END THEME STYLES -->
+<script type="text/javascript" src="{{ asset('backend/js/jquery-3.2.1.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('backend/js/bootstrap.min.js') }}"></script>
+  <!-- load ck editor -->
+  <script type="text/javascript" src="{{ asset('backend/ckeditor/ckeditor.js') }}"></script>
 <link rel="shortcut icon" href="favicon.ico"/>
+
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->

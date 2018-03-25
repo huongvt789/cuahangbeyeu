@@ -18,4 +18,27 @@ Route::group(['prefix'=>'order'],function(){
 	Route::get('/pdfview/{id}','Admin\OrderController@pdfview')->name('order.pdfview');
 	// Route::get('pdfview/{id}',array('as'=>'pdfview','uses'=>'Admin\OrderController@pdfview'));
 });
+Route::group(array("prefix"=>"news"), function() {
+    //list news
+    Route::get('/','Admin\c_newsController@list_news')->name('news.index');
+    // edit news
+    Route::get('/edit/{id}','Admin\c_newsController@edit');
+    //do edit news
+    Route::post('/edit/{id}','Admin\c_newsController@do_edit');
+    //add news
+    Route::get('/add', 'Admin\c_newsController@add');
+    //do add
+    Route::post('/add','Admin\c_newsController@do_add');
+    //delete news
+    Route::get('/delete/{id}','Admin\c_newsController@delete');
+});
+Route::group(array("prefix"=>"producer"), function() {
+    //list producer 
+    Route::get('/','Admin\producerController@list_producer')->name('producer.index');
+    // do add/edit
+    Route::post('/', 'Admin\producerController@add_edit_producer');
+    //delete
+    Route::get('/delete/{id}','Admin\producerController@delete');
+});
+
  ?>
