@@ -15,9 +15,5 @@ class Product extends Model
     	$text= str_limit($this->short_desc,$number,'...');
     	return $text;
     }
-    public function getProduct(){
-    	$prod= Product::find($this->product_id);
-    	return $prod;
-    } 
    
 }

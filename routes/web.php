@@ -12,7 +12,7 @@
 */
 
 Route::get('/','HomeController@index')->name('homepage');
-Route::view('massive-tpl','layout.massive'); 
+Route::view('massive-tpl','layout.massive'); 	 
 /*Route::get('/','HomeController@news')->name('news');*/
 Route::get(App\Category::CATE_URL.'{cateSlug}','HomeController@cate')->name('cate.detail'); 
 // Auth route

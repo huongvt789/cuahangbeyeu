@@ -12,7 +12,7 @@
     <!--favicon icon-->
     <link rel="icon" type="image/png" href="{{asset('massive/img/favicon.png')}}">
 
-    <title>Thang Mobile</title>
+    <title>Cửa hàng bé yêu</title>
     <!--include css-->
     @include('sub.client.css')
     <!--end include css-->

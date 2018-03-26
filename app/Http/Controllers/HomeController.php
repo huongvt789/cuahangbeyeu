@@ -14,7 +14,7 @@ class HomeController extends Controller
     }
     public function cate($cateSlug){
         $cate=Category::Where('slug',$cateSlug)->first();
-        $prod=Product::Where('category_id',$cate->id)->paginate(24);
+        $prod=Product::Where('fk_category_id',$cate->category_id)->paginate(9);
         if(!$cate){
             dd('not-found');
         } 
