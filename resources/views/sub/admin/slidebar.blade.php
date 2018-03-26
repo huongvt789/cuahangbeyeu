@@ -88,14 +88,14 @@
 				</li>
 				<li>
 					<a href="{{route('news.index')}}">
-					<i class="icon"></i>
+					<i class="fa fa-newspaper-o"></i>
 					<span class="title">Tin tức</span>
 					<span class="arrow "></span>
 					</a>
 				</li>
 				<li>
 					<a href="{{route('producer.index')}}">
-					<i class="icon"></i>
+					<i class="fa fa-home"></i>
 					<span class="title">Nhà cung cấp</span>
 					<span class="arrow "></span>
 					</a>
