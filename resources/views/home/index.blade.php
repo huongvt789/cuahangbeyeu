@@ -9,10 +9,6 @@
                 <div class="pull-left">
                     <form method="post" action="#">
                         <select class="form-control"> 
-                            <option>Default sorting</option>
-                            <option>Sort by popularity</option>
-                            <option>Sort by average ratings</option>
-                            <option>Sort by newness</option>
                             <option>Sort by price: low to high</option>
                             <option>Sort by price: high to low</option>
                         </select>

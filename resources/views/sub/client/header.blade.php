@@ -14,7 +14,7 @@
                 <ul class="menuzord-menu menuzord-right c-nav_s-standard">
                     <li><a href="{{route('homepage')}}">Home</a>
                     </li>
-                    <li><a href="#">Blog</a>
+                    <li><a href="{{route('news')}}">News</a>
                     </li>
                     <div class="megamenu">
                         <div class="megamenu-row">

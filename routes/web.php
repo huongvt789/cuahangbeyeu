@@ -13,7 +13,7 @@
 
 Route::get('/','HomeController@index')->name('homepage');
 Route::view('massive-tpl','layout.massive'); 	 
-/*Route::get('/','HomeController@news')->name('news');*/
+Route::get('/news/{slug?}','HomeController@newsindex')->name('news');
 Route::get(App\Category::CATE_URL.'{cateSlug}','HomeController@cate')->name('cate.detail'); 
 // Auth route
 Route::get('cp-login','Auth\LoginController@login')->name('login');
@@ -109,3 +109,4 @@ Route::post('auth-forget-password',function(Request $request){
 	$user->save();
 	return 'done!';
 })->name('auth.reset-pwd');
+Route::get('/news/{newSlug}','HomeController@newsdetail')->name('new.detail');

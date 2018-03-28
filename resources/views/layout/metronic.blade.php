@@ -77,7 +77,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	@include('sub.admin.slidebar')
 	<!-- END SIDEBAR -->
 	<!-- BEGIN CONTENT -->
-	<div class="page-content-wrapper">
+	<div class="page-content-wrapper" style="padding-top: -50px;">
 		<div class="page-content">
 			@yield('content')
 		</div>

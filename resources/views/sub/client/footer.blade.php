@@ -1,5 +1,5 @@
 <footer id="footer" class="dark">
-            <div class="primary-footer">
+            <!-- <div class="primary-footer">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3">
@@ -7,7 +7,7 @@
                                 <img class="retina" src="{{asset('massive/img/logo-dark.png')}}" alt="" />
                             </a>
                             <p>Massive is fully responsible, performance oriented and SEO optimized, retina ready WordPress theme.</p>
-
+            
                         </div>
                         <div class="col-md-3">
                             <h5 class="text-uppercase">recent posts</h5>
@@ -91,23 +91,13 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="secondary-footer">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <span class="m-top-10">Copyright 2012 - 2015 Massive Theme by <a href="http://themebucket.net/" class="f-link" target="_blank">ThemeBucket</a> | All Rights Reserved</span>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="social-link circle pull-right">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-dribbble"></i></a>
-                                <a href="#"><i class="fa fa-google-plus"></i></a>
-                                <a href="#"><i class="fa fa-behance"></i></a>
-                            </div>
-                        </div>
+                    <div class="copyright">
+                        <p style="text-align: center; margin-bottom: -5px; margin-top: -5px;">Bản quyền © 2009-2012 babyshop.com.vn - Thiên đường cho Bé!</p>
+                        <p style="text-align: center;margin-bottom: -20px;"><strong>Số 623, Hoàng Hoa Thám, Q. Ba Đình. Tel: 04-3761 8738</strong></p>
                     </div>
                 </div>
             </div>
