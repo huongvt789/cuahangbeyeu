@@ -21,7 +21,7 @@
                 setInterval(slide,7000);
             </script>
             <div id="slide">
-                <img style="width: 1150px;height: 350px;margin-top: -30px;margin-bottom: -20px;" src="{{asset('assets/banner/anh4.jpg')}}" id="imgslide">
+                <img title="Cuộc thi ảnh online nhận quà liền tay" style="width: 1150px;height: 350px;margin-top: -30px;margin-bottom: -20px;" src="{{asset('assets/banner/anh1.jpg')}}" id="imgslide">
             </div>
         </div>
 </section>

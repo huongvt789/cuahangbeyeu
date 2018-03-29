@@ -12,10 +12,19 @@
 */
 
 Route::get('/','HomeController@index')->name('homepage');
-Route::view('massive-tpl','layout.massive'); 	 
-Route::get('/news/{slug?}','HomeController@newsindex')->name('news');
+Route::view('massive-tpl','layout.massive'); 	
+
+//route news 
+Route::get('/news','HomeController@newsindex')->name('news');
+Route::get(App\News::NEWS_URL.'{newSlug}','HomeController@newsdetail')->name('new.detail');
+
+//route cate & product
 Route::get(App\Category::CATE_URL.'{cateSlug}','HomeController@cate')->name('cate.detail'); 
-// Auth route
+Route::get('tim-kiem','HomeController@searchProduct')->name('search_product');
+Route::post('tim-kiem-theo-gia','HomeController@filter')->name('product.filter');
+
+
+// Auth route login
 Route::get('cp-login','Auth\LoginController@login')->name('login');
 Route::post('cp-login','Auth\LoginController@postLogin');
 Route::any('logout',function(){
@@ -40,6 +49,8 @@ use Illuminate\Http\Request;
 use App\PasswordReset;
 use Carbon\Carbon;
 use App\Users;
+
+//route email
 Route::post('forget-pwd-email',function(Request $request){
 	$email=$request->email;
 	$user= App\Users::where('email',$email)->first();
@@ -109,4 +120,3 @@ Route::post('auth-forget-password',function(Request $request){
 	$user->save();
 	return 'done!';
 })->name('auth.reset-pwd');
-Route::get('/news/{newSlug}','HomeController@newsdetail')->name('new.detail');

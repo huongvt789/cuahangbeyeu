@@ -4,32 +4,32 @@
     <div class="row">
         <div class="col-md-9">
             <!--product option-->
-            <!-- <div class="clearfix m-bot-30 inline-block">
-            
+            <div class="clearfix m-bot-30 inline-block">
+
                 <div class="pull-left">
                     <form method="post" action="#">
                         <select class="form-control"> 
-                            <option ><a href="/?sort=asc">Sort by price: low to high</a></option>
-                            <option><a href="/?sort=desc">Sort by price: high to low</a></option>
+                            <option>Sort by price: low to high</option>
+                            <option>Sort by price: high to low</option>
                         </select>
                     </form>
                 </div>
-            
+
                 <div class="pull-left m-top-5 m-left-10">
-                    Showing 1–10 of 55 results 
+                    Showing 1–10 of 55 results
                 </div>
-            
+
                 <div class="pull-right shop-view-mode">
                     <a href="#"> <i class="fa fa-th-large"></i> 
                     </a>
                     <a href="#"> <i class="fa fa-th-list"></i> 
                     </a>
                 </div>
-            
-            </div> -->
+
+            </div>
             <!--product option-->
             <div class="row">
-                @foreach ($product as $prd)
+                @foreach ($product as $p)
                 <div class="col-md-4">
                     <!--product list-->
                     <div class="product-list">
@@ -43,10 +43,10 @@
                             
                         </div>
                         <div class="product-title">
-                            <h5><a href="#">{{$prd->p_name}}</a></h5>
+                            <h5><a href="#">{{$p->p_name}}</a></h5>
                         </div>
                         <div class="product-price">
-                            {{$prd->p_price}}
+                            {{$p->p_price}}
                         </div>
                         <div class="product-btn">
                             <a href="#" class="btn btn-extra-small btn-dark-border  "><i class="fa fa-shopping-cart"></i> Add to cart</a>
@@ -89,18 +89,18 @@
                 <div class="heading-title-alt text-left heading-border-bottom">
                     <h6 class="text-uppercase">price filter</h6>
                 </div>
-                <form method="post" action="{{route('product.filter')}}">
-                    {{csrf_field()}}
+                <form method="post" action="#">
+
                     <div class="row">
                         <div class="col-xs-12 form-group">
-                            <input type="text" name="pricefrom" id="pricefrom" class=" form-control" placeholder="From, VND" maxlength="100">
+                            <input type="text" name="price-from" id="price-from" class=" form-control" placeholder="From, $" maxlength="100">
                         </div>
 
                         <div class="col-xs-12 form-group">
-                            <input type="text" name="priceto" id="priceto" class=" form-control" placeholder="To, VND" maxlength="100">
+                            <input type="text" name="price-to" id="price-to" class=" form-control" placeholder="To, $" maxlength="100">
                         </div>
                         <div class=" col-xs-12 form-group">
-                            <button type="submit" class="btn btn-small btn-dark-border  btn-transparent">Filter</button>
+                            <button class="btn btn-small btn-dark-border  btn-transparent">Filter</button>
                         </div>
                     </div>
                 </form>
@@ -158,6 +158,5 @@
         </div>
 
     </div>
-    <input type="hidden" id="ajaxToken" value="{{csrf_token()}}">
 </div>
 @endsection

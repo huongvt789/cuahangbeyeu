@@ -5,7 +5,7 @@
             <nav class="menuzord js-primary-navigation" role="navigation" aria-label="Primary Navigation">
 
                 <!--logo start-->
-                <a href="index-2.html" class="logo-brand">
+                <a href="{{route('homepage')}}" class="logo-brand">
                     <img class="retina" src="{{asset('massive/img/logo.png')}}" alt="Massive">
                 </a>
                 <!--logo end-->
@@ -15,73 +15,6 @@
                     <li><a href="{{route('homepage')}}">Home</a>
                     </li>
                     <li><a href="{{route('news')}}">News</a>
-                    </li>
-                    <div class="megamenu">
-                        <div class="megamenu-row">
-                            <div class="col3">
-                                <ul class="list-unstyled">
-                                    <li><a href="shortcode-alert.html">Alert</a>
-                                    </li>
-                                    <li><a href="shortcode-buttons.html">Buttons</a>
-                                    </li>
-                                    <li><a href="shortcode-career.html">Career</a>
-                                    </li>
-                                    <li><a href="shortcode-carousel.html">Carousel</a>
-                                    </li>
-                                    <li><a href="shortcode-clients.html">Clients</a>
-                                    </li>
-                                    <li><a href="shortcode-countdown.html">Countdown</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col3">
-                                <ul class="list-unstyled">
-                                    <li><a href="shortcode-divider.html">Divider</a>
-                                    </li>
-                                    <li><a href="shortcode-featured-box.html">Featured Box</a>
-                                    </li>
-                                    <li><a href="shortcode-fun-factors.html">Fun Factors</a>
-                                    </li>
-                                    <li><a href="shortcode-heading-style.html">Heading Style</a>
-                                    </li>
-                                    <li><a href="shortcode-icon-list.html">Icon List</a>
-                                    </li>
-                                    <li><a href="shortcode-post.html">Post</a>
-                                    </li>
-
-                                </ul>
-                            </div>
-                            <div class="col3">
-                                <ul class="list-unstyled">
-                                    <li><a href="shortcode-pricing-table.html">Pricing Table </a>
-                                    </li>
-                                    <li><a href="shortcode-progress-bar.html">Progress Bar </a>
-                                    </li>
-                                    <li><a href="shortcode-promo-box.html">Promo box </a>
-                                    </li>
-                                    <li><a href="shortcode-subscribe.html">Subscribe</a>
-                                    </li>
-                                    <li><a href="shortcode-tabs.html">Tabs</a>
-                                    </li>
-                                    <li><a href="shortcode-tables.html">Tables</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col3">
-                                <ul class="list-unstyled">
-                                    <li><a href="shortcode-team.html">Team</a>
-                                    </li>
-                                    <li><a href="shortcode-testimonial.html">Testimonials </a>
-                                    </li>
-                                    <li><a href="shortcode-timeline.html">Timeline </a>
-                                    </li>
-                                    <li><a href="shortcode-toggle-accordion.html">Toggle Accordion </a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
                     </li>
 
                     <li class="nav-divider" aria-hidden="true"><a href="javascript:void(0)">|</a>
@@ -151,8 +84,8 @@
                     <li>
                         <a href="javascript:void(0)"><i class="fa fa-search"></i> Search</a>
                         <div class="megamenu megamenu-quarter-width navbar-search">
-                            <form role="searchform">
-                                <input type="text" class="form-control" placeholder="Search Here">
+                            <form role="searchform" action="{{route('search_product')}}">
+                                <input type="text" class="form-control"  name="keyword" placeholder="Search Here">
                             </form>
                         </div>
                     </li>

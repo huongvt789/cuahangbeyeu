@@ -22,7 +22,7 @@
                             <h5><a href="{{route('new.detail',['newSlug'=>$p->slug])}}">{{$p->n_name}}</a></h5>
                         </div>
                         <div class="product-price">
-                            {{$p->limitDesc(120)}}
+                            {!!$p->limitDesc(120)!!} 
                         </div>
                     </div>
                     <!--product list-->
