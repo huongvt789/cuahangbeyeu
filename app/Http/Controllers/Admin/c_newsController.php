@@ -35,15 +35,15 @@ class c_newsController extends Controller
         if($request->hasFile("n_img")){
             // lấy ảnh cũ và thực hiện xóa ảnh
             $old_img = DB::table("news")->where("n_id","=",$id)->select("n_img","n_id")->first();
-            if (file_exists('upload/news/'.$old_img->n_img)) {
+            if (file_exists('news/'.$old_img->n_img)) {
                 # code...
-                unlink('upload/news/'.$old_img->n_img);
+                unlink('news/'.$old_img->n_img);
             }
             // lấy tên ảnh
             $n_img = $request->file('n_img')->getClientOriginalName();
             $n_img = time().$n_img;
             // thực hiện việc upload ảnh
-            $request->file("n_img")->move('upload/news',$n_img);
+            $request->file("n_img")->move('news',$n_img);
             //update bản ghi
             DB::table("news")->where("n_id","=",$id)->update(array("n_img"=>$n_img));
         }
