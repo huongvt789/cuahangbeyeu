@@ -1,6 +1,7 @@
 @extends('layout.massive')
 @section('content')
 <div class="container">
+    <title>Cửa hàng bé yêu - Mua sữa online</title>
     <div class="row">
         <div class="col-md-9">
             <!--product option-->

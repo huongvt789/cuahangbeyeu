@@ -2,6 +2,7 @@
 @section('content')
 <div class="container">
     <div class="row">
+        <title>Tin tức</title>
         <div class="col-md-12">
             <!--product option-->
             <div class="row">

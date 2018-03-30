@@ -1,78 +1,11 @@
 @extends('layout.massive')
 @section('content')
-<!-- <div class="col-md-9">
-    <div class="container">
-        <h1>{{$cate->c_name}}</h1>
-            @foreach ($prod as $p)
-             <div class="row">
-                    <div class="col-md-4">
-                        product list
-                        <div class="product-list">
-                            <div class="product-img">
-                                <a href="#">
-                                    <img src="{{asset('massive/img/product/1.jpg')}}" alt="" />
-                                </a>
-                                <a href="#">
-                                    <img src="{{asset('massive/img/product/1-alt.jpg')}}" alt="" />
-                                </a>
-                                
-                            </div>
-                            <div class="product-title">
-                                <h5><a href="#">{{$p->p_name}}</a></h5>
-                            </div>
-                            <div class="product-price">
-                                {{$p->p_price}}
-                            </div>
-                            <div class="product-btn">
-                                <a href="#" class="btn btn-extra-small btn-dark-border  "><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                            </div>
-                        </div>
-                        product list
-                    </div>
-                    @endforeach
-                    
-
-                    <div class="text-center col-md-12">
-                        <ul class="pagination custom-pagination">
-                            {{$prod->links()}}
-                        </ul>
-                    </div>
-
-                </div>
-            </div> -->
 <div class="container">
     <div class="row">
         <div class="col-md-9">
+            <title>{{$cate->c_name}}</title>
             <!--product option-->
             <h1>{{$cate->c_name}}</h1>
-            <!-- <div class="clearfix m-bot-30 inline-block">
-            
-                <div class="pull-left">
-                    <form method="post" action="#">
-                        <select class="form-control"> 
-                            <option>Default sorting</option>
-                            <option>Sort by popularity</option>
-                            <option>Sort by average ratings</option>
-                            <option>Sort by newness</option>
-                            <option>Sort by price: low to high</option>
-                            <option>Sort by price: high to low</option>
-                        </select>
-                    </form>
-                </div>
-            
-                <div class="pull-left m-top-5 m-left-10">
-                    Showing 1–10 of 55 results
-                </div>
-            
-                <div class="pull-right shop-view-mode">
-                    <a href="#"> <i class="fa fa-th-large"></i> 
-                    </a>
-                    <a href="#"> <i class="fa fa-th-list"></i> 
-                    </a>
-                </div>
-            
-            </div> -->
-            <!--product option-->
             <div class="row">
                 @foreach ($prod as $p)
                 <div class="col-md-4">

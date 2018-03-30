@@ -6,11 +6,12 @@
             <!--classic image post-->
             <div class="blog-classic">
                 @foreach($new as $row)
+                <title>{{$row->n_name}}</title>
                 <div class="blog-post">
                     <div class="full-width">
                         <img src="assets/img/post/p12.jpg" alt="" />
                     </div>
-                    <h4 class="text-uppercase"><a href="{{route('new.detail',['newSlug'=>$row->slug])}}">{{ $row->n_name }}</a></h4>
+                    <h1 class="text-uppercase"><a href="{{route('new.detail',['newSlug'=>$row->slug])}}">{{ $row->n_name }}</a></h1>
                     <ul class="post-meta">
                         <li><i class="fa fa-user"></i>posted by <a href="#" style="margin-left: 5px;">  {{$row->author}}</a>
                         </li>

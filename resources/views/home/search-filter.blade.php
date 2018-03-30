@@ -2,6 +2,7 @@
 @section('content')
 <div class="container">
     <div class="row">
+        <title>Cửa hàng bé yêu - Mua sữa online </title>
         <div class="col-md-9">
             <!--product option-->
             <!-- <div class="clearfix m-bot-30 inline-block">
