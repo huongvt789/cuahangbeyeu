@@ -2,7 +2,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-12">
             <!--product option-->
             <div class="row">
                 @foreach ($news as $p)
@@ -39,8 +39,8 @@
             </div>
         </div>
         
-        <div class="col-md-3 ">
-            <!--product category-->
+        <!-- <div class="col-md-3 ">
+            product category
             <div class="widget">
                 <div class="heading-title-alt text-left heading-border-bottom">
                     <h6 class="text-uppercase">product category</h6>
@@ -55,11 +55,11 @@
                     @endforeach
                 </ul>
             </div>
-            <!--product category-->
-
-
-
-            <!--top rated product-->
+            product category
+        
+        
+        
+            top rated product
             <div class="widget">
                 <div class="heading-title-alt text-left heading-border-bottom">
                     <h6 class="text-uppercase">Top Rated News</h6>
@@ -83,10 +83,10 @@
                     @endforeach
                 </ul>
             </div>
-            <!--top rated product-->
-
-
-            <!--product tags-->
+            top rated product
+        
+        
+            product tags
             <div class="widget">
                 <div class="heading-title-alt text-left heading-border-bottom">
                     <h6 class="text-uppercase">PRODUCT TAGS</h6>
@@ -101,10 +101,10 @@
                     <a href="#">Shoes</a>
                 </div>
             </div>
-            <!--product tags-->
-
+            product tags
+        
         </div>
-
+         -->
     </div>
 </div>
 @endsection

@@ -134,18 +134,18 @@
                 <div class="heading-title-alt text-left heading-border-bottom">
                     <h6 class="text-uppercase">price filter</h6>
                 </div>
-                <form method="post" action="#">
-
+                <form method="post" action="{{route('product.filter')}}">
+                    {{csrf_field()}}
                     <div class="row">
                         <div class="col-xs-12 form-group">
-                            <input type="text" name="price-from" id="price-from" class=" form-control" placeholder="From, $" maxlength="100">
+                            <input type="text" name="pricefrom" id="pricefrom" class=" form-control" placeholder="From, VND" maxlength="100">
                         </div>
 
                         <div class="col-xs-12 form-group">
-                            <input type="text" name="price-to" id="price-to" class=" form-control" placeholder="To, $" maxlength="100">
+                            <input type="text" name="priceto" id="priceto" class=" form-control" placeholder="To, VND" maxlength="100">
                         </div>
                         <div class=" col-xs-12 form-group">
-                            <button class="btn btn-small btn-dark-border  btn-transparent">Filter</button>
+                            <button  type="submit" class="btn btn-small btn-dark-border  btn-transparent">Filter</button>
                         </div>
                     </div>
                 </form>
@@ -203,5 +203,6 @@
         </div>
 
     </div>
+    <input type="hidden" id="ajaxToken" value="{{csrf_token()}}">
 </div>
 @endsection

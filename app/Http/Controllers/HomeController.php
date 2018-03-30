@@ -58,17 +58,11 @@ class HomeController extends Controller
     public function filter(Request $request){
         if(!$request->pricefrom||!$request->priceto)
         {
-            return redirect(route('homepage'));
+            return redirect(route('homepage'));         
         }
-        // $priceto=$request->priceto;
-        // $pricefrom=$request->pricefrom; 
-         $priceto=5;
-         $pricefrom=10;
-         $a = [5,10];
-        // $product=Product::whereBetween('p_price',[ $priceto, $pricefrom])->toSql();
-        $users = DB::table('product')
-                    ->whereBetween('p_price',$a)->toSql();
-        dd($users);
-        return view('home.search-filter',compact('priceto','product','priceform'));
+        $priceto=$request->priceto;
+        $pricefrom=$request->pricefrom;
+        $product=Product::whereBetween('p_price',[$pricefrom,$priceto])->get();
+        return view('home.search-filter',compact('product'));
     }
 }
