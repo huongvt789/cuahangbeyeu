@@ -41,4 +41,16 @@ Route::group(array("prefix"=>"producer"), function() {
     Route::get('/delete/{id}','Admin\producerController@delete');
 });
 
+Route::group(array("prefix"=>"category"), function() {
+    Route::get('/danhsach', 'Admin\CategoryController@getDanhSach')->name('category.index');
+
+    Route::get('/them', 'Admin\CategoryController@getThem');
+    Route::post('/them', 'Admin\CategoryController@postThem')->name('them');
+
+    Route::get('/sua/{id}', 'Admin\CategoryController@getSua');
+    Route::post('/sua/{id}', 'Admin\CategoryController@postSua');
+
+    Route::get('/xoa/{id}', 'Admin\CategoryController@getXoa');
+});
+
  ?>

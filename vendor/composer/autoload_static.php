@@ -16,6 +16,7 @@ class ComposerStaticInitcbb3aefe4374ccbfa59746bbb6f99bbe
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
+        '2e8ee9f8e1e8c7e66f455d2e805a9ae7' => __DIR__ . '/../..' . '/app/function/function.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -347,6 +348,7 @@ class ComposerStaticInitcbb3aefe4374ccbfa59746bbb6f99bbe
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Admin\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AdminController.php',
+        'App\\Http\\Controllers\\Admin\\CategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/CategoryController.php',
         'App\\Http\\Controllers\\Admin\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/DashboardController.php',
         'App\\Http\\Controllers\\Admin\\OrderController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/OrderController.php',
         'App\\Http\\Controllers\\Admin\\c_newsController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/c_newsController.php',
