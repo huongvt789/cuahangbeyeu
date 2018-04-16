@@ -22,7 +22,7 @@
 					<th>Giá</th>
 					<th style="width: 100px;">Hot product</th>
 					<th>Nhà cung cấp</th>
-					<th style="width: 150px;"></th>
+					<th style="width: 160px;"></th>
 				</tr>
 				<?php
 					foreach($sanpham as $rows)

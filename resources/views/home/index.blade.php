@@ -35,15 +35,15 @@
                     <div class="product-list">
                         <div class="product-img">
                             <a href="#">
-                                <img src="{{asset('massive/img/product/1.jpg')}}" alt="" />
+                                <img src="{{asset('upload/product/'.$prd->p_img)}}" alt="" />
                             </a>
                             <a href="#">
-                                <img src="{{asset('massive/img/product/1-alt.jpg')}}" alt="" />
+                                <img src="{{asset('upload/product/'.$prd->p_img)}}" alt="" />
                             </a>
                             
                         </div>
                         <div class="product-title">
-                            <h5><a href="#">{{$prd->p_name}}</a></h5>
+                            <h5><a href="{{route('cate.detail',['cateSlug'=>$prd->slug])}}">{{$prd->p_name}}</a></h5>
                         </div>
                         <div class="product-price">
                             {{$prd->p_price}}
@@ -121,7 +121,7 @@
                     <li>
                         <div class="thumb">
                             <a href="#">
-                                <img src="{{asset('massive/img/product/4.jpg')}}" alt="">
+                                <img src="{{asset('upload/product/'.$prdm->p_img)}}" alt="">
                             </a>
                         </div>
                         <div class="w-desk">

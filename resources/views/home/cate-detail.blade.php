@@ -80,10 +80,10 @@
                     <div class="product-list">
                         <div class="product-img">
                             <a href="#">
-                                <img src="{{asset('massive/img/product/1.jpg')}}" alt="" />
+                                <img src="{{asset('upload/product/'.$p->p_img)}}" alt="" />
                             </a>
                             <a href="#">
-                                <img src="{{asset('massive/img/product/1-alt.jpg')}}" alt="" />
+                                <img src="{{asset('upload/product/'.$p->p_img)}}" alt="" />
                             </a>
                             
                         </div>

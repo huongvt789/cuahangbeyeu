@@ -54,7 +54,7 @@ class SanPhamController extends Controller
     	$sanpham->fk_category_id = $request->fk_category_id;
     	$sanpham->idProducer = $request->idProducer;
         $sanpham->p_hotproduct = $request->p_hotproduct;
-    	if ($request->hasFile('p_img')) {
+;    	if ($request->hasFile('p_img')) {
     		$file = $request->file('p_img');
     		$duoi = $file->getClientOriginalExtension();
     		if ($duoi != "jpg" && $duoi != "png" && $duoi != "jpeg") {

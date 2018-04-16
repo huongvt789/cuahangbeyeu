@@ -2,7 +2,7 @@
 @section('content')
 <div class="col-md-10 col-md-offset-1">
 	<div class="panel panel-primary">
-		<div class="panel-heading">Thêm sản phẩm</div>
+		<div class="panel-heading">Sửa sản phẩm</div>
 		<div class="panel-body">
 			@if(count($errors) > 0)
 			<div class="alert alert-danger">
