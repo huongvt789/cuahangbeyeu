@@ -10,4 +10,9 @@ class Category extends Model
     protected $table='category';
     public $timestamps = false;
     protected $primaryKey = 'category_id';
+
+    //liên kết đến bản sản phẩm
+    public function sanpham(){
+    	return $this->hasMany('App\Product','fk_category_id','product_id');
+    }
 }

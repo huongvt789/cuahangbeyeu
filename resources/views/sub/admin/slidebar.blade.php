@@ -121,6 +121,27 @@
 						</li>
 					</ul>
 				</li>
+				<li>
+					<a href="javascript:;">
+					<i class="fa fa-home"></i>
+					<span class="title">Sản phẩm</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="{{route('product.index')}}">
+							<i class="fa fa-list-alt"></i>
+							Danh sách
+							</a>
+						</li>
+						<li>
+							<a href="{{ url('admin/product/them') }}">
+							<i class="fa fa-plus-square"></i>
+							Thêm
+							</a>
+						</li>
+					</ul>
+				</li>
 			</ul>
 			<!-- END SIDEBAR MENU -->
 		</div>

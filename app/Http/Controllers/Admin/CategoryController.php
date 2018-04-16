@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 namespace App\Http\Controllers\Admin;
 
@@ -23,7 +23,7 @@ class CategoryController extends Controller
     			"c_name" => "required|unique:category,c_name|min:3|max:32"
     		],
     		[
-    			"c_name.required" => "Bạn chưa nhập tên sản phẩm",
+    			"c_name.required" => "Bạn chưa nhập tên loại sản phẩm",
     			"c_name.unique" => "Tên loại sản phẩm đã tồn tại",
     			"c_name.min" => "Tên loại sản phẩm phải có ít nhất 3 kí tự",
     			"c_name.max" => "Tên loại sản phẩm có độ dài tối đa 32 kí tự"
@@ -34,8 +34,8 @@ class CategoryController extends Controller
     	$category->c_name = $request->c_name;
     	$category->slug = changeTitle($request->c_name);
 
-    	$category->save();
-    	return redirect('admin/category/them')->with('thongbao','Thêm thành công');
+    	// $category->save();
+    	// return redirect('admin/category/them')->with('thongbao','Thêm thành công');
     }
 
     public function getSua($id){

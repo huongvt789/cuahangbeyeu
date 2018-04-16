@@ -7,7 +7,7 @@
 			@if(count($errors) > 0)
 			    <div class="alert alert-danger">
 			    	@foreach($errors->all() as $err)
-                    	{{ $err }}
+                    	{{ $err }}<br>
 			   		@endforeach
 			    </div>
 			@endif
@@ -18,7 +18,7 @@
 				</div>
 			@endif
 
-			<form method="post" action="{{ route('them') }}" enctype= "multipart/form-data">
+			<form method="post" action="{{ route('themCategory') }}" enctype= "multipart/form-data">
 			<input type="hidden" name="_token" value="{{ csrf_token() }}">
 			<!-- row -->
 			<div class="row" style="margin-top:5px;">
@@ -32,7 +32,7 @@
 			<div class="row" style="margin-top:5px;">
 				<div class="col-md-3"></div>
 				<div class="col-md-9">
-					<input type="submit" class="btn btn-primary" value="Process">
+					<input type="submit" class="btn btn-primary" value="Thêm">
 				</div>
 			</div>
 			<!-- end row -->

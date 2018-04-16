@@ -45,12 +45,24 @@ Route::group(array("prefix"=>"category"), function() {
     Route::get('/danhsach', 'Admin\CategoryController@getDanhSach')->name('category.index');
 
     Route::get('/them', 'Admin\CategoryController@getThem');
-    Route::post('/them', 'Admin\CategoryController@postThem')->name('them');
+    Route::post('/them', 'Admin\CategoryController@postThem')->name('themCategory');
 
     Route::get('/sua/{id}', 'Admin\CategoryController@getSua');
     Route::post('/sua/{id}', 'Admin\CategoryController@postSua');
 
     Route::get('/xoa/{id}', 'Admin\CategoryController@getXoa');
+});
+
+Route::group(array("prefix"=>"product"), function() {
+    Route::get('/danhsach', 'Admin\SanPhamController@getDanhSach')->name('product.index');
+
+    Route::get('/them', 'Admin\SanPhamController@getThem');
+    Route::post('/them', 'Admin\SanPhamController@postThem')->name('themProduct');
+
+    Route::get('/sua/{id}', 'Admin\SanPhamController@getSua');
+    Route::post('/sua/{id}', 'Admin\SanPhamController@postSua');
+
+    Route::get('/xoa/{id}', 'Admin\SanPhamController@getXoa');
 });
 
  ?>
