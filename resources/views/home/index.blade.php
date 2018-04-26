@@ -43,7 +43,7 @@
                             
                         </div>
                         <div class="product-title">
-                            <h5><a href="{{route('cate.detail',['cateSlug'=>$prd->slug])}}">{{$prd->p_name}}</a></h5>
+                            <h5><a href="{{ url('product/'.$prd->product_id) }}">{{$prd->p_name}}</a></h5>
                         </div>
                         <div class="product-price">
                             {{$prd->p_price}}

@@ -12,7 +12,8 @@
 */
 
 Route::get('/','HomeController@index')->name('homepage');
-Route::view('massive-tpl','layout.massive'); 	
+Route::view('massive-tpl','layout.massive');
+Route::get('product/{id}', 'HomeController@productdetail');	
 
 //route news 
 Route::get('/news','HomeController@newsindex')->name('news');

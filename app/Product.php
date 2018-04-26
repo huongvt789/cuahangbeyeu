@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     protected $table='product';
+    const PRODUCT_URL="product/";
     public $timestamps = false;
     protected $primaryKey = 'product_id';
     public function limitTitle($number){

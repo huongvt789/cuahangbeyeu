@@ -24,6 +24,11 @@ class HomeController extends Controller
         $product=Product::paginate(9);
         return view('home.index',compact('product'));
     }
+    public function productdetail($id){
+        $product = Product::find($id);
+        return view('home.product-detail',["product"=>$product]);
+    }
+
     public function cate($cateSlug){
         $cate=Category::Where('slug',$cateSlug)->first();
         $prod=Product::Where('fk_category_id',$cate->category_id)->paginate(9);
